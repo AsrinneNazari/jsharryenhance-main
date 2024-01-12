@@ -1,10 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
-// TODO
-// enhance code
-// fixa så att det blir 108 000 kr istf 108000 kr
-
 class Car {
   constructor(name, type, color, fuel, year, img, price) {
     this.name = name;
@@ -29,8 +25,8 @@ for (let i = 0; i < 20; i += 1) {
   const fuel = faker.vehicle.fuel();
   const year = faker.number.int({ min: 1970, max: 2023 });
   const price = faker.number.int({ min: 1, max: 100 });
-  const totalPrice = faker.number.int({ min: 30, max: 200 }) * 1000;
-  cars.push(new Car(name, type, color, fuel, year, price, totalPrice));
+  const mainPrice = faker.number.int({ min: 30, max: 200 }) * 1000;
+  cars.push(new Car(name, type, color, fuel, year, price, mainPrice));
 }
 
 function createHtmlForCars() {
@@ -48,5 +44,4 @@ function createHtmlForCars() {
   }
 }
 
-console.log(cars);
 createHtmlForCars();
