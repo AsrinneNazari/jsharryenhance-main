@@ -7,15 +7,20 @@ import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
 class Car {
   constructor(name, type, color, fuel, year, img, price) {
-    this.name = name,
+    this.name = name;
     this.type = type;
     this.color = color;
     this.fuel = fuel;
     this.year = year;
     this.img = `https://axmjqhyyjpat.objectstorage.eu-amsterdam-1.oci.customer-oci.com/n/axmjqhyyjpat/b/randomimages/o/cars%2F${img}.png`;
-    this.price = price;
+    this.price = price.toLocaleString({
+      style: 'currency',
+      currency: 'SEK',
+      minimumFractionDigits: 0,
+    });
   }
 }
+
 
 const cars = [];
 // Generate 20 cars
