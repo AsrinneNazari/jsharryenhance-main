@@ -22,8 +22,7 @@ class Car {
 }
 
 const cars = [];
-// Generate 20 cars
-for (let i = 0; i < 10; i += 1) {
+for (let i = 0; i < 20; i += 1) {
   const name = faker.vehicle.vehicle();
   const type = faker.vehicle.type();
   const color = faker.vehicle.color();
