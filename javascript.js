@@ -25,8 +25,8 @@ for (let i = 0; i < 20; i += 1) {
   const fuel = faker.vehicle.fuel();
   const year = faker.number.int({ min: 1970, max: 2023 });
   const img = faker.number.int({ min: 1, max: 100 });
-  const Price = faker.number.int({ min: 30, max: 200 }) * 1000;
-  cars.push(new Car(name, type, color, fuel, year, img, Price));
+  const price = faker.number.int({ min: 30, max: 200 }) * 1000;
+  cars.push(new Car(name, type, color, fuel, year, img, price));
 }
 
 function createHtmlForCars() {
